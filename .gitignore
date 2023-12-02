@@ -1,0 +1,6 @@
+*.sh
+venv
+venv2
+.idea
+.ipynb_checkpoints
+*.ipynb
