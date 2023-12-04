@@ -1,4 +1,4 @@
-*.sh
+p_data.sh
 venv
 venv2
 .idea
