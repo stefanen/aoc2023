@@ -105,7 +105,9 @@ for k,v in list(reversed(c.items()))[1:]:
 endpoints_s=sorted(list(set(endpoints)))
 
 print(endpoints_s)
-#sys.exit()
+print(len(endpoints_s))
+sys.exit()
+
 
 t_seeds=[]
 pair_c=0
