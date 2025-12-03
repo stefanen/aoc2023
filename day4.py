@@ -1,3 +1,4 @@
+import math
 import sys
 import itertools
 import functools
@@ -17,10 +18,10 @@ import time
 vecadd = lambda *v: tuple(sum(x) for x in zip(*v))
 sys.setrecursionlimit(10000)
 
-day = '2'
+day = '4'
 p = subprocess.run("bash -c './p_data.sh " + day + " true' ")
 input = open('./input_d_' + day + '.txt').read()
-
+#input = open('./input_d_' + day + '_small.txt').read()
 
 lines=[e for e in input.split('\n')]
 
@@ -34,10 +35,11 @@ col_length=len(lines)-1
 row_length=max([len(lines[c]) for c in range(0,col_length)])
 print(col_length, row_length)
 #matrix=[[list(lines[y])[x] if len(list(lines[y]))>x else " " for x in range(0,row_length)] for y in range(0,col_length)]
-#matrix=[[x for x in range(0,row_length)] for y in range(0,col_length)]
+matrix=[[list(lines[y])[x] for x in range(0,row_length)] for y in range(0,col_length)]
 #print(matrix)
+s=0
 
-print(input)
+#print(input)
 #PARSE SIMPLE
 for line in lines[0:]:
     parts=line.split(' ')
